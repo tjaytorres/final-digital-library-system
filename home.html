@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HomePage</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+  .drop-shadow-custom {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  }
+</style>
+</head>
+<body class="bg-[#d3d3d3] font-serif" style="width:1440px; height:1016px;">
+
+  <div class="flex min-h-full" style="width:1440px; height:1016px;">
+    <!-- Sidebar -->
+    <aside class="bg-[#1a3a5a] flex flex-col items-center py-6 space-y-8" style="width:75px;">
+      <div
+        class="rounded-full bg-[#f5e38c] flex items-center justify-center border border-[#bfb76a]"
+        style="width:75px; height:75px;"
+      >
+        <img src="Logo.jpg" alt="Readly logo" class="w-full h-full object-contain" />
+      </div>
+      <button aria-label="Dashboard" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="dashboard.jpg" alt="Dashboard icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="Books" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="Book.jpg" alt="Books icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="Open Book" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="sidebutton.jpg" alt="Open book icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="List" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="icon buttons.jpg" alt="List icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="Help" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="sidebutton.jpg" alt="Help icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="Settings" class="hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="sidebutton.jpg" alt="Settings icon" class="w-full h-full object-contain" />
+      </button>
+      <button aria-label="Logout" class="mt-auto hover:text-[#f5e38c] p-1" style="width:50px; height:50px;">
+        <img src="sidebutton.jpg" alt="Logout icon" class="w-full h-full object-contain" />
+      </button>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 bg-[#f0eee9] p-6 md:p-8 lg:p-10 relative" style="width:1365px;">
+
+      <!-- Top bar -->
+      <header class="flex justify-end space-x-6 mb-6">
+        <button aria-label="Notifications" class="text-black hover:text-gray-700 p-1" style="width:50px; height:50px;">
+          <img src="Notif.jpg" alt="Notification bell icon" class="w-full h-full object-contain" />
+        </button>
+        <button aria-label="User Profile" class="text-black hover:text-gray-700 p-1" style="width:50px; height:50px;">
+          <img src="profile.jpg" alt="User profile icon" class="w-full h-full object-contain" />
+        </button>
+      </header>
+
+      <!-- Greeting and stats container -->
+      <section class="mb-6 flex justify-between items-start">
+        <div>
+          <h1
+            class="font-[Roboto_Condensed] font-extrabold text-[22px] leading-[26px] tracking-widest text-black mb-1"
+          >
+            HELLO, READERS!
+          </h1>
+          <p class="text-[14px] text-black">April 5, 2025 | Saturday, 10:00 AM</p>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="flex flex-col justify-center items-center border border-black rounded-md w-36 h-20 p-3"
+          >
+            <p class="font-extrabold text-[20px] leading-[24px]">120</p>
+            <p class="italic text-[12px] leading-[14px]">Borrowed Books</p>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-black rounded-md w-36 h-20 p-3"
+          >
+            <div class="flex items-center space-x-2 mb-1">
+              <p class="font-extrabold text-[20px] leading-[24px]">120</p>
+              <i class="fas fa-book text-lg"></i>
+            </div>
+            <p class="italic text-[12px] leading-[14px]">Overdue Books</p>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-black rounded-md w-36 h-20 p-3"
+          >
+            <div class="flex items-center space-x-2 mb-1">
+              <p class="font-extrabold text-[20px] leading-[24px]">120</p>
+              <i class="fas fa-book text-lg"></i>
+            </div>
+            <p class="italic text-[12px] leading-[14px]">Total Book Read</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table and featured book -->
+      <section class="flex flex-col md:flex-row md:space-x-6 mb-8">
+        <!-- Table -->
+        <table class="border border-black border-collapse w-full md:w-1/2 max-w-md mb-6 md:mb-0">
+          <thead>
+            <tr class="bg-[#cfc6be] text-[14px] font-semibold text-black">
+              <th class="border border-black px-3 py-2 text-left w-10">#</th>
+              <th class="border border-black px-3 py-2 text-left">Title</th>
+              <th class="border border-black px-3 py-2 text-left">Author</th>
+              <th class="border border-black px-3 py-2 text-left w-20">Views</th>
+            </tr>
+          </thead>
+          <tbody class="text-[14px] text-black">
+            <tr>
+              <td class="border border-black px-3 py-1">1</td>
+              <td class="border border-black px-3 py-1">Noli Me Tangere</td>
+              <td class="border border-black px-3 py-1">Jose Rizal</td>
+              <td class="border border-black px-3 py-1 text-right">200</td>
+            </tr>
+            <tr>
+              <td class="border border-black px-3 py-1">2</td>
+              <td class="border border-black px-3 py-1">The Book Thief</td>
+              <td class="border border-black px-3 py-1">Markus Zusak</td>
+              <td class="border border-black px-3 py-1 text-right">100</td>
+            </tr>
+            <tr>
+              <td class="border border-black px-3 py-1">3</td>
+              <td class="border border-black px-3 py-1">The Alchemist</td>
+              <td class="border border-black px-3 py-1">Paulo Coelho</td>
+              <td class="border border-black px-3 py-1 text-right">100</td>
+            </tr>
+            <tr>
+              <td class="border border-black px-3 py-1">4</td>
+              <td class="border border-black px-3 py-1">Unlock Your Potential</td>
+              <td class="border border-black px-3 py-1">Jeff Lerner</td>
+              <td class="border border-black px-3 py-1 text-right">100</td>
+            </tr>
+            <tr>
+              <td class="border border-black px-3 py-1">5</td>
+              <td class="border border-black px-3 py-1">The Power of Now</td>
+              <td class="border border-black px-3 py-1">Eckhart Tolle</td>
+              <td class="border border-black px-3 py-1 text-right">100</td>
+            </tr>
+            <tr>
+              <td class="border border-black px-3 py-1">6</td>
+              <td class="border border-black px-3 py-1">El Filibusterismo</td>
+              <td class="border border-black px-3 py-1">Jose Rizal</td>
+              <td class="border border-black px-3 py-1 text-right">300</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Featured book -->
+<div class="flex flex-col md:flex-row w-full md:w-1/2 relative items-center" style="min-width: 360px;">
+  <!-- Book Image -->
+  <img
+    src="Emilia.jpg"
+    alt="Book cover of Emilia"
+    class="drop-shadow-custom border border-black"
+    style="width:180px; height:280px; box-sizing: border-box; border-width: 1px;"
+  />
+
+  <!-- Text + Button -->
+  <div class="flex flex-col justify-center ml-0 md:ml-12 relative" style="max-width: 400px; position: relative;">
+    <h2 class="font-bold text-black text-[16px] mb-2">
+      Emilia: Finding My Forever
+    </h2>
+    <p class="text-[14px] text-black mb-4 max-w-xs">
+      Emilia, a mixture of Enzo and Elianna. She isn’t afraid of anyone and is a headstrong force to be reckoned with.
+      For most of her life, Emilia had only had two goals in mind: attaining her degree and finding her forever.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex items-center space-x-4">
+      <button class="bg-[#1a3a5a] text-white text-[14px] font-semibold px-6 py-2 rounded">
+        READ
+      </button>
+    </div>
+  </div>
+
+  <!-- Arrow icon: right-center -->
+  <div class="absolute right-0 top-1/2 transform -translate-y-1/2 mr-[-40px] md:mr-0">
+    <img src="Arrow.jpg" alt="Arrow icon" class="w-6 h-6 object-contain" />
+  </div>
+</div>
+
+
+      <!-- Main Content Start -->
+<main class="p-4">
+  
+  <!-- Your Emilia / other sections here -->
+
+  <!-- Emilia section -->
+  <!-- [INSERT EMILIA CODE HERE] -->
+
+  <!-- Book Recommendation Section — Now moved to bottom -->
+  <section class="mt-6">
+    <h3 class="font-bold text-black text-[16px] mb-4 ml-4">Book Recommendation</h3>
+    <div class="border border-black rounded-md p-3 overflow-x-auto scrollbar-hide mx-4">
+      <div class="flex space-x-6 min-w-max">
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Night.jpg" alt="Night Circus" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Night Circus</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Gatsby.jpj" alt="The Great Gatsby" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Alchemist</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Night.jpg" alt="Night Circus" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Night Circus</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Gatsby.jpj" alt="The Great Gatsby" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Alchemist</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Night.jpg" alt="Night Circus" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Night Circus</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center text-[12px] text-black">
+          <img src="Gatsby.jpj" alt="The Great Gatsby" class="w-24 h-36 object-cover mb-2" />
+          <figcaption>The Alchemist</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Main Content End -->
+</body>
+</html>
+
