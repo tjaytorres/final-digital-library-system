@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Readly Template</title>
+  <link rel="stylesheet" href="template.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo" onclick="toggleSidebar()">
+        <img src="Images\logo.png" alt="Readly Logo" />
+      </div>
+      <nav class="nav">
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\dashboard.png" alt="Dashboard Icon" /><span>Dashboard</span></a>
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\bookedit.png" alt="Book Edit Icon" /><span>Book Edit</span></a>
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\userpage.png" alt="User Page Icon" /><span>User Page</span></a>
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\transaction.png" alt="Transaction Icon" /><span>Transaction</span></a>
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\settings.png" alt="Settings Icon" /><span>Settings</span></a>
+      </nav>
+      <div class="sign-out">
+        <a href="#" onclick="toggleSidebar()"><img class="icon" src="Images\signout.png" alt="Settings Icon" /><span>Settings</span></a>      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <div class="spacer"></div>
+        <div class="header-icons">
+          <img class="icon" src="Images\notif.png">
+          <img class="icon" src="Images\profile.png">
+        </div>
+      </header>
+      <section class="content">
+        <!-- Main content goes here -->
+      </section>
+    </main>
+  </div>
+
+    <script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("collapsed");
+    }
+    </script>
+
+</body>
+</html>
