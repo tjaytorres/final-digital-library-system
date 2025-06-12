@@ -1,17 +1,8 @@
-<?php
-// Connect to the database
-include 'db_connect.php';
-
-// Fetch books from the database
-$query = "SELECT * FROM books";
-$result = mysqli_query($conn, $query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Book Details - READLY</title>
+  <title>Book Details</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -237,7 +228,7 @@ $result = mysqli_query($conn, $query);
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="logo" onclick="toggleSidebar()">
-      <img src="/Images/logo.png" alt="Readly Logo" />
+      <img src="/Images/logo.png" alt="Logo" />
     </div>
     <nav class="nav">
       <a href="#"><img class="icon" src="/Images/dashboard.png" /><span>Dashboard</span></a>
@@ -255,7 +246,7 @@ $result = mysqli_query($conn, $query);
   <!-- Main content -->
   <div class="main-content">
     <div class="topbar">
-      <div class="left"><span>READLY</span></div>
+      <div class="left"></div>
       <div class="right">
         <img src="/Images/notif.png" alt="Notifications">
         <img src="/Images/profile.png" alt="Profile">
@@ -265,22 +256,7 @@ $result = mysqli_query($conn, $query);
     <div class="content">
       <h2>Book Details</h2>
       <div class="book-grid">
-        <?php while ($row = mysqli_fetch_assoc($result)) : ?>
-          <div class="book-card">
-            <img src="<?= htmlspecialchars($row['cover_image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>" class="book-image" />
-            <div class="book-info">
-              <strong><?= htmlspecialchars($row['title']) ?></strong>
-              <p><?= htmlspecialchars($row['author']) ?></p>
-              <p><strong>Genre:</strong> <?= htmlspecialchars($row['category']) ?></p>
-              <p><strong>Status:</strong> <?= htmlspecialchars($row['status']) ?></p>
-              <p class="description"><?= htmlspecialchars($row['description']) ?></p>
-              <div class="book-buttons">
-                <button onclick="openBorrowModal('<?= htmlspecialchars(addslashes($row['title'])) ?>')">Borrow</button>
-                <a href="read_book.php?id=<?= urlencode($row['isbn']) ?>"><button>Read</button></a>
-              </div>
-            </div>
-          </div>
-        <?php endwhile; ?>
+        <!-- Static book cards can go here manually -->
       </div>
     </div>
   </div>
@@ -289,7 +265,7 @@ $result = mysqli_query($conn, $query);
 <!-- Borrow Modal -->
 <div id="borrowModal">
   <div class="modal-content">
-    <img src="logo.png" alt="READLY" style="width:80px; display:block; margin:auto;">
+    <img src="logo.png" alt="Logo" style="width:80px; display:block; margin:auto;">
     <h2>Fill up the following</h2>
     <form id="borrowForm" action="submit_borrow.php" method="POST">
       <label>User ID</label>
